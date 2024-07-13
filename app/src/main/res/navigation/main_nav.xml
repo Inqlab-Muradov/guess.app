@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.inqlab.tahminfragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_radioFragment2"
+            app:destination="@id/radioFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/radioFragment2"
+        android:name="com.inqlab.tahminfragment.RadioFragment"
+        android:label="fragment_radio"
+        tools:layout="@layout/fragment_radio" >
+        <action
+            android:id="@+id/action_radioFragment2_to_tahminFragment"
+            app:destination="@id/tahminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tahminFragment"
+        android:name="com.inqlab.tahminfragment.TahminFragment"
+        android:label="fragment_tahmin"
+        tools:layout="@layout/fragment_tahmin" >
+        <argument
+            android:name="number"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_tahminFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.inqlab.tahminfragment.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="condition"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
